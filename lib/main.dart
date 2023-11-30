@@ -21,35 +21,53 @@ class ProductDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Product Details'),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+      appBar: AppBar(
+        title: const Text('Product Details'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             const Text(
-              'Product Name',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w300,
-                fontStyle: FontStyle.italic,
-                color: Colors.black,
-                backgroundColor: Color.fromARGB(255, 153, 18, 63),
-              ),
+              'UltraWide Monitor',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             Image.network(
-              'https://placekitten.com/200/200', // Replace with your product image URL
-              width: 150,
-              height: 150,
+              'https://cdn.thewirecutter.com/wp-content/media/2022/11/24inchmonitors-2048px-9977-3x2-1.jpg',
+              height: 200,
+              width: 200,
+              fit: BoxFit.cover,
             ),
             const SizedBox(height: 16),
             const Text(
-              'Product Name',
-              style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
+              'Product Price: \$499.99',
+              style: TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 16),
+            const Text(
+              'Specifications:',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Resolution: 2560x1080',
+              style: TextStyle(fontSize: 16),
+            ),
+            const Text(
+              'Refresh Rate: 144Hz',
+              style: TextStyle(fontSize: 16),
+            ),
+            const Text(
+              'Response Time: 1ms',
+              style: TextStyle(fontSize: 16),
+            ),
+            const Text(
+              'Panel Type: IPS',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -59,8 +77,10 @@ class ProductDetailsPage extends StatelessWidget {
               },
               child: const Text('Buy Now'),
             ),
-          ]),
-        ));
+          ],
+        ),
+      ),
+    );
   }
 }
 
